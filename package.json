@@ -1,0 +1,26 @@
+{
+    "name": "sencha-ico-moon",
+    "version": "0.0.1",
+    "description": "Converts ICO Moon project files into Sencha SASS icon file",
+    "homepage": "https://github.com/tohagan/sencha-ico-moon",
+    "author": {
+        "name": "Tony O'Hagan",
+        "email": "tony@ohagan.name"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:tohagan/sencha-ico-moon.git"
+    },
+    "keywords": [
+        "icon",
+        "ico-moon",
+        "sencha",
+        "scss",
+        "sass"
+    ],
+    "preferGlobal": "true",
+    "main": "lib/index.js",
+    "engines": {
+        "node": ">=0.10.0"
+    }
+}
