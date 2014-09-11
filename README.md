@@ -1,39 +1,57 @@
 ## DESCRIPTION
 
-Converts an ICO-Moon project file into a SASS _icons.scss file for use in your Sencha Touch project.
+Converts an [*Ico Moon*](https://icomoon.io/app) project file into a SASS file for use in a [*Sencha Touch*](www.sencha.com/products/touch) project.  
+
+Basically I got tied of having to manually re-enter character codes everytime I updated the font file since it's difficult to avoid changing them and the CSS file provide by *Ico Moon* does not work with the SASS `icon()` macro used by Sencha Touch apps.
+
+You can also assign names your icons in your *Ico Moon* project and they become `iconCls` names (with an `ico-` prefix) in your Sencha project.  
 
 ## USAGE
 
     $ sench-ico-moon <icomoon-project>.json <font-name>
 
-## Creating a custom icon font file for Sencha Touch using IcoMoon 
+## Creating a custom icon font for Sencha Touch using IcoMoon 
+
+I typically replace the standard *pictos* font that come standard with *Sencha Touch* since I can select from a larger set of matching icons at Ico Moon. Every icon you add increases the loading time of your app so in general only select the ones you need.
+
+You can just use the default names given to each icon but I recommend you consider renaming your icons to the **purpose** you're using them for in your app and given them. This will make your iconCls values more readable and then if you want to change the icon later you can select a new one and give it the old name with no change to the rest of your app.  I find I make less errors using this approach. 
 
 To create an icon file for Sench Touch ...
 
-Visit [https://icomoon.io/app](https://icomoon.io/app), create a Project and select your icons from the many free and less free font icons.
+**Step 1**.  Visit [https://icomoon.io/app](https://icomoon.io/app), create a new Project and select your icons from the many hundreds of free and less free font icons.  
 
-Make sure that you **name your project** using the online *Project Manager* to your font name (`myfont` in this example).  
+Make sure that you **name your project** using the online *Project Manager* to your font name (`myfont` in this example).  No spaces in the name please*!*    
 
-Download Project and font ZIP file ... 
+**Step 2**.Download Project and font ZIP file ... 
 
-1. Save ico-moon project: `myfont.json` 
+- Save ico-moon project: `myfont.json` 
    - Saved via Menu (top left button) > Manage Projects > Download
-2. Save `myfont.zip` 
+- Save `myfont.zip` 
    - Saved via Font > Download
-3. Create folder called `resources/sass/stylesheets/fonts/myfonts`
-4. Copy font files in `myfont.zip/fonts/` into this folder.
-  - If you named your in Ico Moon Project == `myfont` then your font files should now have the corresponding name like `myfont.svg`, `myfont.ttf`, `myfont.woff`. If not, you'll need to rename them. 
 
-Now run this app to generate your SASS icon file from the Ico-Moon project file:
+
+**Step 3**. Copy your font files into your Sencha Touch project: 
+
+- Create folder called `resources/sass/stylesheets/fonts/myfonts`
+- Copy font files in `myfont.zip/fonts/` into this folder.
+
+Your font file names should match your Ico Moon project name. If not, you'll need to rename them. Example: `myfont.svg`, `myfont.ttf`, `myfont.woff`. 
+
+
+**Step 3**. Run this app to generate your SASS icon file from the Ico-Moon project file:
 
      $ sench-ico-moon myfont.json myfont
      Writing _icons-myfont.scss ...
 
-Now copy the 
+**Step 4**. Copy `_icons-myfont.scss` to `resources/sass/_icons-myfont.scss`
+  
+**NOTE**: Import files must start with an underscore to prevent SASS compiler generating another CSS output file.
 
-1. Copy `_icons-myfont.scss` to `resources/sass/_icons-myfont.scss`  
-   - Import files must start with an underscore to prevent SASS compiler generating another CSS output file.
-2. Add this line to your `resources/sass/app.scss` file after sencha's `@import` commands:
+
+**Step 5**. Add this line to your `resources/sass/app.scss` file after sencha's `@import` commands:
+
   -	`@import '_icons-myfont.scss'`
+
+All the icons have a `ico-` prefix to avoid name collisions with other CSS styles.
 
 
