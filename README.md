@@ -12,7 +12,7 @@ To create an icon file for Sench Touch ...
 
 Visit [https://icomoon.io/app](https://icomoon.io/app), create a Project and select your icons from the many free and less free font icons.
 
-Make sure that you **name your project* using the online **Project Manager** to your font name (`myfont` in this example).  
+Make sure that you **name your project** using the online *Project Manager* to your font name (`myfont` in this example).  
 
 Download Project and font ZIP file ... 
 
