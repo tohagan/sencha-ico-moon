@@ -1,4 +1,4 @@
-## DESCRIPTION
+### DESCRIPTION
 
 Converts an [*Ico Moon*](https://icomoon.io/app) project file into a SASS file for use in a [*Sencha Touch*](www.sencha.com/products/touch) project.  
 
@@ -6,16 +6,22 @@ Basically I got tied of having to manually re-enter character codes everytime I 
 
 You can also assign names your icons in your *Ico Moon* project and they become `iconCls` names (with an `ico-` prefix) in your Sencha project.  
 
-## INSTALL
+### INSTALL
 
     $ npm install -g sencha-ico-moon 
 
-
-## USAGE
+### USAGE
 
     $ sencha-ico-moon <icomoon-project>.json <font-name>
 
-## Creating a custom icon font for Sencha Touch using IcoMoon 
+
+### EXAMPLE DATA
+
+- **Input**: [myfont.json](https://raw.githubusercontent.com/tohagan/sencha-ico-moon/master/myfont.json) - *Ico Moon Project file*
+
+- **Output**: [_icons-myfont.scss](https://github.com/tohagan/sencha-ico-moon/blob/master/_icons-myfont.scss) - *Sencha Touch SASS icon import file*
+
+### Creating a custom icon font for Sencha Touch using IcoMoon 
 
 I typically replace the standard *pictos* font that come standard with *Sencha Touch* since I can select from a larger set of matching icons at Ico Moon. Every icon you add increases the loading time of your app so in general only select the ones you need.
 
@@ -61,5 +67,3 @@ Your font file names should match your Ico Moon project name. If not, you'll nee
   -	`@import '_icons-myfont.scss'`
 
 All the icons have a `ico-` prefix to avoid name collisions with other CSS styles.
-
-
