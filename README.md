@@ -8,12 +8,12 @@ You can also assign names your icons in your *Ico Moon* project and they become 
 
 ## INSTALL
 
-    $ npm install -g sench-ico-moon 
+    $ npm install -g sencha-ico-moon 
 
 
 ## USAGE
 
-    $ sench-ico-moon <icomoon-project>.json <font-name>
+    $ sencha-ico-moon <icomoon-project>.json <font-name>
 
 ## Creating a custom icon font for Sencha Touch using IcoMoon 
 
@@ -21,7 +21,7 @@ I typically replace the standard *pictos* font that come standard with *Sencha T
 
 You can just use the default names given to each icon but I recommend you consider renaming your icons to the **purpose** you're using them for in your app and given them. You can do this in Ico Moon. This will make your iconCls values more readable and then if you want to change the icon later you can select a new one and give it the old name with no change to the rest of your app.  I find I make less errors using this approach. 
 
-To create an icon file for Sench Touch ...
+To create an icon file for Sencha Touch ...
 
 **Step 1**.  Visit [https://icomoon.io/app](https://icomoon.io/app), create a new Project and select your icons from the many hundreds of free and less free font icons.  
 
@@ -48,7 +48,7 @@ Your font file names should match your Ico Moon project name. If not, you'll nee
 
 **Step 3**. Run this app to generate your SASS icon file from the Ico-Moon project file:
 
-     $ sench-ico-moon myfont.json myfont
+     $ sencha-ico-moon myfont.json myfont
      Writing _icons-myfont.scss ...
 
 **Step 4**. Copy `_icons-myfont.scss` to `resources/sass/_icons-myfont.scss`
@@ -56,7 +56,7 @@ Your font file names should match your Ico Moon project name. If not, you'll nee
 **NOTE**: Import files must start with an underscore to prevent SASS compiler generating another CSS output file.
 
 
-**Step 5**. Add this line to your `resources/sass/app.scss` file after sencha's `@import` commands:
+**Step 5**. Add this line to your `resources/sass/app.scss` file after Sencha's `@import` commands:
 
   -	`@import '_icons-myfont.scss'`
 
