@@ -2,7 +2,7 @@
 
 Converts an [*Ico Moon*](https://icomoon.io/app) project file into a SASS file for use in a [*Sencha Touch*](www.sencha.com/products/touch) project.  
 
-Basically I got tied of having to manually re-enter character codes everytime I updated the font file since it's difficult to avoid changing them and the CSS file provide by *Ico Moon* does not work with the SASS `icon()` macro used by Sencha Touch apps.
+Basically I got tied of having to manually re-enter character codes everytime I updated the font file since it's difficult to avoid changing them and the CSS file provided by *Ico Moon* does not work with the SASS `icon()` macro used by Sencha Touch apps.
 
 You can also assign names your icons in your *Ico Moon* project and they become `iconCls` names (with an `ico-` prefix) in your Sencha project.  
 
@@ -23,9 +23,9 @@ You can also assign names your icons in your *Ico Moon* project and they become 
 
 ### Creating a custom icon font for Sencha Touch using IcoMoon 
 
-I typically replace the standard *pictos* font that come standard with *Sencha Touch* since I can select from a larger set of matching icons at Ico Moon. Every icon you add increases the loading time of your app so in general only select the ones you need.
+I usually replace the *pictos* font that installs with a new *Sencha Touch* project since I can select from a larger set of matching icons at Ico Moon. Just keep in mind that every icon you add increases the loading time of your app.
 
-You can just use the default names given to each icon but I recommend you consider renaming your icons to the **purpose** you're using them for in your app and given them. You can do this in Ico Moon. This will make your iconCls values more readable and then if you want to change the icon later you can select a new one and give it the old name with no change to the rest of your app.  I find I make less errors using this approach. 
+You can just use the default names given to each icon but I recommend you consider renaming your icons to the *purpose* you're using them for in your app. You can do this in Ico Moon. Then, if you want to change the icon later, you can select a new one and give it the old name with no change to the rest of your app. This will make your `iconCls` values more readable and reduce your coding errors. 
 
 To create an icon file for Sencha Touch ...
 
