@@ -6,6 +6,11 @@ Basically I got tied of having to manually re-enter character codes everytime I 
 
 You can also assign names your icons in your *Ico Moon* project and they become `iconCls` names (with an `ico-` prefix) in your Sencha project.  
 
+## INSTALL
+
+    $ npm install -g sench-ico-moon 
+
+
 ## USAGE
 
     $ sench-ico-moon <icomoon-project>.json <font-name>
