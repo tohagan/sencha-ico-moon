@@ -14,7 +14,7 @@ You can also assign names your icons in your *Ico Moon* project and they become 
 
 I typically replace the standard *pictos* font that come standard with *Sencha Touch* since I can select from a larger set of matching icons at Ico Moon. Every icon you add increases the loading time of your app so in general only select the ones you need.
 
-You can just use the default names given to each icon but I recommend you consider renaming your icons to the **purpose** you're using them for in your app and given them. This will make your iconCls values more readable and then if you want to change the icon later you can select a new one and give it the old name with no change to the rest of your app.  I find I make less errors using this approach. 
+You can just use the default names given to each icon but I recommend you consider renaming your icons to the **purpose** you're using them for in your app and given them. You can do this in Ico Moon. This will make your iconCls values more readable and then if you want to change the icon later you can select a new one and give it the old name with no change to the rest of your app.  I find I make less errors using this approach. 
 
 To create an icon file for Sench Touch ...
 
@@ -24,10 +24,13 @@ Make sure that you **name your project** using the online *Project Manager* to y
 
 **Step 2**.Download Project and font ZIP file ... 
 
-- Save ico-moon project: `myfont.json` 
-   - Saved via Menu (top left button) > Manage Projects > Download
+Before saving the files I recommend that you reset the codes to start from code 21 ('!') so that they are all printable characters. 
+
 - Save `myfont.zip` 
    - Saved via Font > Download
+   - You can reset the codes from here.
+- Save ico-moon project: `myfont.json` 
+   - Saved via Menu (top left button) > Manage Projects > Download
 
 
 **Step 3**. Copy your font files into your Sencha Touch project: 

@@ -3,7 +3,6 @@
 try {
 	var fs = require('fs');
 	var path = require('path');
-	console.log(process.argv);
 	
 	if (process.argv.length !== 4) {
 		console.info('Usage: ' + path.basename(process.argv[1]) + ' font-project.json font-name');
@@ -32,7 +31,9 @@ try {
 	proj.iconSets.forEach(function(iconSet) {
 		iconSet.selection.forEach(function(icon) {
 			if (icon.name && icon.name.length > 0) {
-				icons.push("@include icon('ico-" + icon.name + "',\t" + icon.code + ", '" + fontName + "');");
+				var ch = String.fromCharCode(icon.code);
+				if (ch === "'") ch = "\\'";
+				icons.push("@include icon('ico-" + icon.name + "',\t'" + ch + "', '" + fontName + "');");
 			}
 		});
 	});
@@ -43,8 +44,8 @@ try {
 	console.log();
 	console.log("1. Copy fonts/ in your ZIP file to resources/sass/stylesheets/fonts/" + fontName + "/");
 	console.log("2. Copy '" + outFile + "' file to resources/sass/" + outFile);
-	console.log("3. Add to your resources/sass/app.scss file after sencha's @import commands" );
-	console.log("@import '" + outFile + "'");
+	console.log("3. Add to your resources/sass/app.scss file after sencha's @import commands:" );
+	console.log("   @import '" + outFile + "'");
 } catch (ex) {
     console.error(ex);
     process.exit(1);
