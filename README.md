@@ -69,3 +69,11 @@ Your font file names should match your Ico Moon project name. If not, you'll nee
   -	`@import '_icons-myfont.scss'`
 
 All the icons have an `ico-` prefix to avoid name collisions with other CSS styles.
+
+## Other Open Source Sencha Tools
+
+Other Sencha tools I've developed ...
+
+  - [Sencha Touch Live](https://github.com/tohagan/stlive) - Live edit and save your JS/HTML/CSS source code in Sencha Touch / PhoneGap projects and autosync changes into multiple mobile devices of mixed OS types. Massively speeds up your mobile app development by avoiding recompiling, redeployment, restarting app and debugger for most code changes.  Includes detailed installation instructions.
+  
+  - Coming Soon: AutoLogger - Automated rule based logging for Sencha ExtJS & Sencha Touch. Performance optimised call logging that records: class and method name, args, response, exceptions, call timing and nested call depth for any pattern of namespace, class or method name. Significantly reduces logging coding effort since now entire classes or namespaces can be logged with a single line rule.  Zero overheads when disabled so ideal for diagnosing faults in both development and production builds.  Additional rules can select manual logging level based on class or method patterns.
