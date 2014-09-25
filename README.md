@@ -31,38 +31,38 @@ To create an icon file for Sencha Touch ...
 
 **Step 1**.  Visit [https://icomoon.io/app](https://icomoon.io/app), create a new Project and select your icons from the many hundreds of free and less free font icons.  
 
-Make sure that you **name your project** using the online *Project Manager* to your font name (`myfont` in this example).  No spaces in the name please*!*    
+Make sure that you **name your project** using the online *Project Manager* to your font name (`myfont` in this example).  Must be no spaces in the project name *!*
 
-**Step 2**.Download Project and font ZIP file ... 
+**Step 2**.Download both Project and font ZIP file ... 
 
 Before saving the files I recommend that you reset the codes to start from code 21 ('!') so that they are all printable characters. 
 
 - Save `myfont.zip` 
-   - Saved via Font > Download
-   - You can reset the codes from here.
+   - Saved via: **Font** > **Download**
+   - You can also reset the icon codes before you download here.
 - Save ico-moon project: `myfont.json` 
-   - Saved via Menu (top left button) > Manage Projects > Download
+   - Saved via: **Menu** (top left button) > **Manage Projects** > **Download**
 
 
 **Step 3**. Copy your font files into your Sencha Touch project: 
 
 - Create folder called `resources/sass/stylesheets/fonts/myfonts`
-- Copy font files in `myfont.zip/fonts/` into this folder.
+- Copy font files in `myfont.zip/fonts/myfont.*` into this folder.
 
-Your font file names should match your Ico Moon project name. If not, you'll need to rename them. Example: `myfont.svg`, `myfont.ttf`, `myfont.woff`. 
+Your font file names should match your Ico Moon project name. If not, you'll need to rename them. Example: `myfont.svg`, `myfont.ttf`, `myfont.woff`.  (Tip: In Windows 7 you can select ALL the font files (Ctrl-A) then rename them ALL *in one step* by hitting F2 and typing the new name and pressing ENTER). Probably works for Windows 8.
 
 
-**Step 3**. Run this app to generate your SASS icon file from the Ico-Moon project file:
+**Step 4**. Run this app to generate your SASS icon file from the Ico-Moon project file:
 
      $ sencha-ico-moon myfont.json myfont
      Writing _icons-myfont.scss ...
 
-**Step 4**. Copy `_icons-myfont.scss` to `resources/sass/_icons-myfont.scss`
+**Step 5**. Copy `_icons-myfont.scss` to `resources/sass/_icons-myfont.scss`
   
 **NOTE**: Import files must start with an underscore to prevent SASS compiler generating another CSS output file.
 
 
-**Step 5**. Add this line to your `resources/sass/app.scss` file after Sencha's `@import` commands:
+**Step 6**. Add this line to your `resources/sass/app.scss` file after Sencha's `@import` commands:
 
   -	`@import '_icons-myfont.scss'`
 
